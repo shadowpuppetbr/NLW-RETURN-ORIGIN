@@ -1,0 +1,95 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* LAYOUT */
+body {
+  font-family: 'DM Sans';
+  background-color: var(--brand-green-light);
+}
+
+section {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+h1 {
+  color: var(--gray-headline);
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: var(--gray-paragraph);
+}
+/*  VARIAVEIS DE CORES */
+:root {
+  --brand-green: hsla(170, 100%, 26%, 1);
+  --brand-green-light: hsla(148, 23%, 89%, 1);
+  --brand-green-hight-2: hsla(180, 14%, 97%, 1);
+  --brand-green-hover: hsla(170, 100%, 14%, 1);
+  --gray-headline: hsla(210, 11%, 15%, 1);
+  --gray-paragraph: hsla(210, 9%, 31%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+
+  --header-height: 4.5rem;
+}
+/* HEADER */
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  height: var(--header-height);
+  background-color: #00856f;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+#header a {
+  color: var(--white);
+  font-weight: 500;
+}
+
+/* INICIO */
+#inicio {
+  align-items: center;
+  text-align: center;
+}
+
+.espacamento {
+  height: var(--header-height);
+}
+
+#inicio .text {
+  margin-top: 2.5rem;
+}
+
+#inicio p:first-child {
+  color: var(--brand-green);
+}
+
+#inicio h2 {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#inicio button {
+  height: 3.25rem;
+  background-color: var(--brand-green);
+  border: 0;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 3.75rem;
+}
+
+#inicio a {
+  color: var(--white);
+  padding: 2rem;
+}
