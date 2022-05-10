@@ -4,6 +4,12 @@ onScroll()
 function onScroll() {
   showNavOnScroll()
   showBackToTopOnScroll()
+  
+  activateMenuAtCurrentSection(inicio)
+  activateMenuAtCurrentSection(services)
+  activateMenuAtCurrentSection(about)
+  activateMenuAtCurrentSection(contact)
+ 
 }
 
 function showBackToTopOnScroll() {
@@ -28,6 +34,29 @@ function openMenu() {
 function closeMenu() {
   body.classList.remove('menu-expanded')
 }
+function activateMenuAtCurrentSection (section){
+  const targetLine = scrollY + innerHeight / 2
+console.log(targetLine)
+  const sectionTop = section.offsetTop
+  const sectionHeight = section.offsetHeight
+  const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop
+
+
+  const sectionEndAt = sectionTop + sectionHeight
+  const sectionEndPassedTargetLine = sectionEndAt <= targetLine
+
+  const sectionBoundaries = sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine
+
+  const sectionId = section.getAttribute('id')
+  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`)
+
+  menuElement.classList.remove('active')
+  if (sectionBoundaries)
+    { menuElement.classList.add('active')
+  }
+
+}
+
 
 ScrollReveal({
   origin: 'top',
@@ -41,3 +70,4 @@ ScrollReveal({
  #service .text,
  #service .service-block
  `)
+
