@@ -713,7 +713,7 @@ section.text .button {
     background-color: var(--white);
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 58rem;
     transform: translateY(-10rem);
     left: 0;
     z-index: -1;
