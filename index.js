@@ -36,7 +36,7 @@ function closeMenu() {
 }
 function activateMenuAtCurrentSection (section){
   const targetLine = scrollY + innerHeight / 2
-console.log(targetLine)
+  
   const sectionTop = section.offsetTop
   const sectionHeight = section.offsetHeight
   const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop
